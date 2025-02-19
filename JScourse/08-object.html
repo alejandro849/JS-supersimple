@@ -7,32 +7,93 @@
 </head>
 <body>
     
-
+<p>4:15:53 LESSON 8 OBJECTS</p>
 
 
 
 
 
     <script>
-        
+       
       const product ={
-        name: 'socks',
-        price: 1090,
+        name:'socks',
+        price:1009
       };
       console.log(product);
       console.log(product.name);
+      
+      console.log(product.price);   
+
+      product.name = 'cotton socks'
+      console.log(product.name);
+
+      product.price = 299;
       console.log(product.price);
 
-      product.name = 'cotton socks';
       console.log(product);
 
-      product.newProperty = true;
-      console.log(product);
+     const truck = {
+       make : 'peterbilt',
+       color: 'black',  
+       type: 'crudeOil',
+       year: 2020 
+     };
+      console.log(truck);
+      console.log(truck.color);
+      console.log(truck.make);
+      console.log(truck.type);
+      console.log(truck.year);
 
-      delete product.newProperty;
-      console.log(product);
+      truck.make = 'international';
+      truck.color = 'blue';
+      truck.type = 'water';
+      truck.year = 2021;
 
-      console.log(typeof product);
+      console.log(truck);
+      console.log(truck.make);
+      console.log(truck.color);
+      console.log(truck.type);
+      console.log(truck.year);
+
+      truck.speedLimit = 65;
+      truck.capacity = '240bbls';
+      truck.parking = 'alexander, nd';
+
+      console.log(truck);
+      console.log(truck.make);
+      console.log(truck.color);
+      console.log(truck.type);
+      console.log(truck.year);
+      console.log(truck.speedLimit);
+      console.log(truck.capacity);
+      console.log(truck.parking);
+
+      delete truck.make;
+      delete truck.color;
+      delete truck.type;
+      console.log(truck);
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
