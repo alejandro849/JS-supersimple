@@ -32,6 +32,9 @@
         score.wins = 0;
         score.losses = 0;
         score.ties = 0;
+        localStorage.removeItem('score');
+        updateScoreElement();
+
     ">
         reset score
     </button>
@@ -47,8 +50,8 @@
         ties: 0
     };
 
-    document.querySelector('.js-score')
-    .innerHTML = `wins: ${score.wins}, loses: ${score.losses}, ties: ${score.ties}`;
+   
+      updateScoreElement();  /* (displays the score on the page) */   
 
      function playGame(playerMove){
         const computerMove = pickComputerMove ();
@@ -103,11 +106,19 @@
 
   localStorage.setItem('score', JSON.stringify(score));
 
+  updateScoreElement();
+
 
 alert(`you picked ${playerMove}. computer picked ${computerMove}. ${result}
 wins: ${score.wins}, loses: ${score.losses}, ties: ${score.ties}`);
 
 }
+
+    function updateScoreElement(){
+        document.querySelector('.js-score')
+            .innerHTML = `wins: ${score.wins}, loses: ${score.losses}, ties: ${score.ties}`;
+
+    }
 
     function pickComputerMove(){
 
