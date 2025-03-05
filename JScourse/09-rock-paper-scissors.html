@@ -24,8 +24,9 @@
         playGame('scissors');
     ">scissors</button>
 
-
-
+<!-- 6:11:15 use the DOM to put the result and the moves in these <p>  -->
+    <p class="js-result"></p>  
+    <p class="js-moves"></p>
     <p class="js-score"></p>
 
     <button onclick="
@@ -108,9 +109,14 @@
 
   updateScoreElement();
 
+// 6:11:25 get the <p> and put the result in the <p> in the page
+    document.querySelector('.js-result').innerHTML = result;
+    document.querySelector('.js-moves').innerHTML = `You ${playerMove} - ${computerMove} Computer`;
 
-alert(`you picked ${playerMove}. computer picked ${computerMove}. ${result}
-wins: ${score.wins}, loses: ${score.losses}, ties: ${score.ties}`);
+
+// result displays in a pop up (alert)
+// alert(`you picked ${playerMove}. computer picked ${computerMove}. ${result}
+// wins: ${score.wins}, loses: ${score.losses}, ties: ${score.ties}`);
 
 }
 
